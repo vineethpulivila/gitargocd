@@ -1,8 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
+metadata:
   labels:
     app: bgd
-    name: bgd
+    app.kubernetes.io/instance: bdg
+  name: bgd
+  namespace: bdg
 spec:
   replicas: 1
   selector:
@@ -16,9 +19,9 @@ spec:
         app: bgd
     spec:
       containers:
-      - image: quay.io/redhatworkshops/bgd:latest
-        name: bgd
-        env:
-        - name: COLOR
-          value: "blue"
-    
+        - env:
+            - name: COLOR
+              value: blue
+          image: 'quay.io/redhatworkshops/bgd:latest'
+          name: bgd
+          resources: {}
