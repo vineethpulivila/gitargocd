@@ -1,10 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
-  creationTimestamp: null
   labels:
     app: bgd
-  name: bgd
+    name: bgd
 spec:
   replicas: 1
   selector:
@@ -23,4 +21,4 @@ spec:
         env:
         - name: COLOR
           value: "blue"
-        resources: {}
+    
