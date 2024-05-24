@@ -24,4 +24,3 @@ spec:
         - name: COLOR
           value: "blue"
         resources: {}
----
