@@ -4,7 +4,7 @@ metadata:
   name: bgd
   namespace: bgd
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: bgd
@@ -21,3 +21,4 @@ spec:
         - name: COLOR
           value: "blue"
         resources: {}
+
